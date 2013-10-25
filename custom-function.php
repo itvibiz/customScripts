@@ -60,6 +60,9 @@ function d_insert($post_id){
     }
 }
 
+/**
+ * Insert white labeling when post is scheduled
+ */
 function d_insert_scheduled($post_id){
     $wllists = partnerDB();
     
@@ -140,6 +143,9 @@ function d_insert_scheduled($post_id){
     }
 }
 
+/**
+ * Mysql Query
+ */
 function mandiri($table, $content){
     return mysql_query('INSERT INTO `'.$table.'`(tanggal, judul, description, isi, symbol) VALUES (now(), "'.$_POST['post_title'].'", "","'.$content.'", "")');
 }
